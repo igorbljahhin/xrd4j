@@ -1,5 +1,5 @@
 image:
-  name: boracompany/bitbucket-pipelines-baseimage:latest
+  name: boracompany/bitbucket-pipelines-baseimage:jdk11
 
 pipelines:
   branches:
