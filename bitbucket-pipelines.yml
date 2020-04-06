@@ -1,0 +1,18 @@
+image:
+  name: boracompany/bitbucket-pipelines-baseimage:latest
+
+pipelines:
+  branches:
+    master:
+      - step:
+          caches:
+            - maven
+          script:
+            - mvn -Dmaven.repo.local=/local-maven-repo -DCI=true --batch-mode --settings bitbucket-settings.xml deploy
+
+    develop:
+      - step:
+          caches:
+            - maven
+          script:
+            - mvn -Dmaven.repo.local=/local-maven-repo -DCI=true --batch-mode --settings bitbucket-settings.xml deploy
