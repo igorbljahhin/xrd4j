@@ -8,11 +8,11 @@ pipelines:
           caches:
             - maven
           script:
-            - mvn -Dmaven.repo.local=/local-maven-repo -DCI=true --batch-mode --settings bitbucket-settings.xml deploy
+            - mvn -Dmaven.repo.local=/local-maven-repo -DCI=true --batch-mode --settings bitbucket-settings.xml -f src/pom.xml deploy
 
     develop:
       - step:
           caches:
             - maven
           script:
-            - mvn -Dmaven.repo.local=/local-maven-repo -DCI=true --batch-mode --settings bitbucket-settings.xml deploy
+            - mvn -Dmaven.repo.local=/local-maven-repo -DCI=true --batch-mode --settings bitbucket-settings.xml -f src/pom.xml deploy

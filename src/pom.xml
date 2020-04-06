@@ -279,4 +279,16 @@
             </distributionManagement>
         </profile>
     </profiles>
+    <distributionManagement>
+        <repository>
+            <id>private-repo-release</id>
+            <url>http://repo.bora.systems/artifactory/libs-release-local</url>
+            <layout>default</layout>
+        </repository>
+        <snapshotRepository>
+            <id>private-repo-snapshot</id>
+            <url>http://repo.bora.systems/artifactory/libs-snapshot-local</url>
+            <layout>default</layout>
+        </snapshotRepository>
+    </distributionManagement>
 </project>
